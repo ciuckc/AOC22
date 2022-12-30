@@ -8,6 +8,6 @@ object main extends App {
 		summedUp += numbers
 	}
 	val result = summedUp.result().sortWith(_ > _)
-	val highestCalorie = result.head.println
-	val topThreeSum = result.take(3).sum.println
+	val firstTask = result.head.println
+	val secondTask = result.take(3).sum.println
 }
