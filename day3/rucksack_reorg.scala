@@ -10,7 +10,10 @@ import scala.io.Source
 		listOfPoints
 	
 	def firstTask(rucksacks: List[String]): Int =
-		val divideItems: List[(String, String)]= rucksacks.map(rucksack => rucksack.splitAt(rucksack.length / 2))
+		val divideItems: List[(String, String)]= rucksacks
+		.map(rucksack => 
+			rucksack.splitAt(rucksack.length / 2)
+			)
 		val commonItemPerRucksack: List[Char] = divideItems.map(_ intersect _).map(_.head)
 		val priorityPointsPerItem: List[Int] = getPriorityPoints(commonItemPerRucksack)
 		priorityPointsPerItem.sum
